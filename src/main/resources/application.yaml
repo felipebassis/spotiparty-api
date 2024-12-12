@@ -1,0 +1,31 @@
+spring:
+  application.name: "spotiparty"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spotiparty-db
+    driverClassName: org.postgresql.Driver
+    username: spotiparty
+    password: 123mudar
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+
+server:
+  port: 9000
+  servlet.context-path: /api
+
+jwt:
+  secret: "e22a19b66c4a477e957a64f3cf0f7af6b32ad7eefa8d47d9b96b44cf04a6f074"
+  issuer: "localhost"
+
+aes:
+  password: "4f%zF9@92s#7"
+  salt: "a108b22fc46443ab9c437e008e23d5a94af2b2e870934d2d996c5535d9d2e11f"
+  key-size: 128
+  iterations: 1000
+
+spotify:
+  authorization-api: "https://accounts.spotify.com"
+  api: "https://api.spotify.com"
+  redirect-uri: "http://localhost:9000/api/v1/spotify/callback"
